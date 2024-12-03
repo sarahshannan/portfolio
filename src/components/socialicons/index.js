@@ -3,28 +3,20 @@ import "./style.css";
 import {
   FaGithub,
   FaTwitter,
-  FaFacebookF,
-  FaLinkedin,
-  FaYoutube,
-  FaTwitch,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTiktok,
-  FaCircle
+  FaLinkedin
 } from "react-icons/fa";
-import { socialprofils } from "../../content_option";
+
+// Updated social profiles object to only include LinkedIn, Twitter, and GitHub
+const socialprofils = {
+  linkedin: "https://www.linkedin.com/in/sara-shannan",
+  twitter: "https://x.com/sarahsh1996",
+  github: "https://github.com/your-profile"
+};
 
 const ICON_MAPPING = {
-  default: FaCircle,
-  facebook: FaFacebookF,
   github: FaGithub,
-  instagram: FaInstagram,
   linkedin: FaLinkedin,
-  snapchat: FaSnapchatGhost,
-  tiktok: FaTiktok,
-  twitter: FaTwitter,
-  twitch: FaTwitch,
-  youtube: FaYoutube
+  twitter: FaTwitter
 };
 
 export const Socialicons = (params) => {
@@ -32,10 +24,10 @@ export const Socialicons = (params) => {
     <div className="stick_follow_icon">
       <ul>
         {Object.entries(socialprofils).map(([platform, url]) => {
-          const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
+          const IconComponent = ICON_MAPPING[platform];
           return (
             <li key={platform}>
-              <a href={url}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
                 <IconComponent />
               </a>
             </li>

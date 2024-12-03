@@ -6,6 +6,9 @@
     --text-color-2: #fff;
     --text-color-3: rgb(204, 0, 0);
     --overlay-color: rgb(12 12 12 / 63%);
+    --modal-background: #fff; /* Light theme background */
+    --modal-text-color: #000; /* Light theme text color */
+    --modal-border: #ddd; /* Optional border color */
 }
 
 [data-theme="light"] {
@@ -16,6 +19,12 @@
     --text-color-2: #000;
     --text-color-3: rgb(204, 0, 0);
     --overlay-color: rgb(255 255 255 / 70%);
+    --modal-background: #fff; /* Light theme background */
+    --modal-text-color: #000; /* Light theme text color */
+    --modal-border: #ddd; /* Optional border color */
+    --hover-background: #ddd; /* Light theme hover background */
+    --hover-border: #aaa; /* Light theme hover border */
+    --hover-text-color: #000; /* Light theme hover text color */
 }
 
 html,
